@@ -1,0 +1,57 @@
+.product-sales {
+  grid-area: sales;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "horizontal-1 horizontal-1 vertical-1 vertical-2"
+    "horizontal-2 horizontal-2 vertical-1 vertical-2";
+  grid-gap: 20px;
+}
+
+.horizontal-1 {
+   grid-area: horizontal-1;
+     height: auto;
+     width: 100%;
+     .horizontal-1st{
+       width: 100%;
+       height: 150px;
+     }
+    
+}
+.horizontal-2 {
+    grid-area: horizontal-2;
+     height: auto;
+     width: 100%;
+  .horizontal-2nd{
+     width: 100%;
+     height: 150px;
+  }
+}
+
+.vertical-1 {
+     grid-area: vertical-1;
+     width: 100%;
+
+  .vertical-1st{
+     width: 100%;
+     height: 323px;
+ }   
+}
+
+.vertical-2 {
+     grid-area: vertical-2;
+    
+   .vertical-2nd{
+      width:100%;
+      height: 323px;
+
+  }
+}
+
+
+.horizontal-1st, .horizontal-2nd, .vertical-1st, .vertical-2nd {
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+}

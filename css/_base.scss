@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500;600;800&display=swap");
+
+@mixin displayFlex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+$pink: #ffd5d6;
+$black: #070707;
+$grey: #8b8e95;

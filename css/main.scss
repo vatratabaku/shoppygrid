@@ -1,0 +1,69 @@
+@import "./base";
+@import "./header";
+@import "./sidebar";
+@import "./sales";
+@import "./new";
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f3f3;
+  height: 100vh;
+  margin: 0;
+  padding: 40px 40px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  @include displayFlex(row, center, center);
+}
+
+.container {
+  font-family: "Raleway", sans-serif;
+  border-radius: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  height: 95vh;
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: 80px 1fr 1fr 2fr;
+  grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "sidebar header header header header"
+    "sidebar sales sales sales sales"
+    "sidebar sales sales sales sales"
+    "sidebar new new new new";
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    height: auto;
+  }
+
+  .container {
+    height: auto;
+    overflow: scroll;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 80px repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-template-areas: "header" "sidebar" "sales" "new";
+  }
+  .product-sales{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "vertical-1 vertical-2"
+    "vertical-1 vertical-2"
+    "horizontal-1 horizontal-1"
+    "horizontal-2 horizontal-2"
+    ;
+  }
+
+  .product-new {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "new-1 new-2"
+    "new-3 new-4"
+  }
+}

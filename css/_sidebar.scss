@@ -1,0 +1,35 @@
+.sidebar {
+  grid-area: sidebar;
+  
+  h2{
+    font-size: 34px;
+    margin: 0;
+  }
+  
+
+  .lists{
+    
+    ul{
+      list-style: none;
+      li{
+        margin: 10px 0;
+        list-style: none;
+        a{
+          text-decoration: none;
+          color:$grey;
+
+          &:visited {
+            text-decoration: none;
+            color:$grey;
+          }
+          &:hover{
+            color: black;
+            font-weight: bold;
+          }
+          
+          
+        }
+      }
+    }
+  }
+}
